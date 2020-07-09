@@ -1,4 +1,8 @@
-source 'https://rubygems.org'
+PRIVATE_GEM_SERVER = 'https://gem.fury.io/invoca'
+PUBLIC_GEM_SERVER = 'https://rubygems.org'
+
+source PRIVATE_GEM_SERVER
+source PUBLIC_GEM_SERVER
 
 gem 'json', '~> 2.3'
 

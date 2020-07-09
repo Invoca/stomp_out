@@ -43,7 +43,15 @@ Gem::Specification.new do |s|
   s.rubygems_version = "2.2.2"
   s.summary = "Client and server for STOMP protocol that operate outboard of separately supplied network connection."
 
-  if s.respond_to? :specification_version then
+  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
+  # to allow pushing to a single host or delete this section to allow pushing to any host.
+  if spec.respond_to?(:metadata)
+    spec.metadata["allowed_push_host"] = "https://gem.fury.io/invoca"
+  else
+    raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
+  end
+
+  if s.respond_to?(:specification_version) then
     s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
